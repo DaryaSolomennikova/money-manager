@@ -1,7 +1,7 @@
 import React from "react";
 import  Logo  from "./Logo";
 import  Navigation  from "./Navigation";
-import AuthorizationBtn from "./Authorization"
+import User from "./User";
 
 export const Header = () => {
   return (
@@ -10,7 +10,7 @@ export const Header = () => {
       <Logo />
       <Navigation />
     </div>
-      <AuthorizationBtn />
+      <User />
     </header>
   );
 };

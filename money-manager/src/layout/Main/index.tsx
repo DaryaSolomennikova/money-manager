@@ -1,9 +1,25 @@
+import React, { useState } from "react";
+import LoginForm from "../Header/LoginForm";
+
 const Main: React.FC = () => {
-    return (
-      <section className="main">
+  const [showLoginForm, setShowLoginForm] = useState(false);
+
+  const handleShowLoginForm = () => {
+    setShowLoginForm(true);
+  };
+
+  return (
+    <section className="main">
+      {showLoginForm ? (
+        <LoginForm onLogin={() => setShowLoginForm(false)} />
+      ) : (
+        <div>
         <h1 className="title">Manage your money <br /> very quickly</h1>
-      </section>
-    );
-  }
-  
-  export default Main;
+        <button className="auth" onClick={handleShowLoginForm}>Log in</button>
+        </div>
+      )}
+    </section>
+  );
+};
+
+export default Main;
