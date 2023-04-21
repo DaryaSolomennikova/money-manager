@@ -2,6 +2,7 @@ import React from "react";
 import  Logo  from "./Logo";
 import  Navigation  from "./Navigation";
 import User from "./User";
+import './style.css';
 
 export const Header = () => {
   return (

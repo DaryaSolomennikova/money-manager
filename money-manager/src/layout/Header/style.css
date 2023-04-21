@@ -1,0 +1,14 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 25px 0;
+    border-bottom: 2px solid rgba(255,255,255, 0.4);;
+  }
+  
+  .header__item{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 65%;
+  }

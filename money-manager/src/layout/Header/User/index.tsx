@@ -1,4 +1,4 @@
-import img from '../../../icons8-пользователь.png';
+import img from '../../../user-icon.png';
 
 const User: React.FC = () => {
     return (

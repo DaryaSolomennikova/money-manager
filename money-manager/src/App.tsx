@@ -1,12 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import Header from '../src/layout/Header';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
 import './App.css';
-
-// eslint-disable-next-line
 
 function App() {
 

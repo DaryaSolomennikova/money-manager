@@ -1,4 +1,5 @@
 import img from '../../../logo-money-manage.png';
+import "./style.css"
 
 const Logo: React.FC = () => {
     return (

@@ -1,9 +1,10 @@
 import React from "react";
+import "./style.css";
 
 const Navigation: React.FC = () => {
     return (
       <nav>
-        <ul>
+        <ul className="nav__list">
           <li>
             <a className="nav__link" href="/">Home</a>
           </li>

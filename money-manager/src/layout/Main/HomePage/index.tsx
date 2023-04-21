@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import LoginForm from "../LoginForm";
+import "./style.css";
 
 const Main: React.FC = () => {
   const [showLoginForm, setShowLoginForm] = useState(false);
+  
 
   const handleShowLoginForm = () => {
     setShowLoginForm(true);

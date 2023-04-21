@@ -1,10 +1,9 @@
 import React from "react";
-import Header from "../../Header";
 
 const AboutPage = () =>{
   return (
-    <div className="about">
-      <h2>необходимо авторизоваться, чтобы просмотреть страницу</h2>
+    <div className="main">
+      <h1>В разработке...</h1>
     </div>
   );
 };

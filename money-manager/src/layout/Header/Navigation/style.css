@@ -1,0 +1,16 @@
+.nav__list{
+    display: flex;
+  }
+
+.nav__link{
+    margin: 0 25px;
+    font-size: 23px;
+    font-weight: 500;
+    font-style: italic;
+    color: #612195;
+  }
+  
+  .nav__link:hover{
+    color:#a54dc8;
+    transition: ease-in-out 0.35s;
+  }
