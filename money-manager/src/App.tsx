@@ -1,13 +1,24 @@
 import React from 'react';
-import Header from './layout/Header';
-import Main from './layout/Main';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import Header from '../src/layout/Header';
+import Home from './pages/Home';
+import About from './pages/About';
+import Services from './pages/Services';
 import './App.css';
 
+// eslint-disable-next-line
+
 function App() {
+
   return (
     <div className="App">
-      <Header />
-      <Main />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
