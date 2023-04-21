@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import LoginForm from "../Header/LoginForm";
+import LoginForm from "./LoginForm";
 
 const Main: React.FC = () => {
   const [showLoginForm, setShowLoginForm] = useState(false);

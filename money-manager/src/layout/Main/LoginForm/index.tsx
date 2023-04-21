@@ -34,6 +34,7 @@ interface LoginFormProps {
         />
       </div>
       <button className="form__btn" type="submit">Log in</button>
+        <p>Don't have an account? <a href="/">Sign Up</a></p>
     </form>
   );
 };

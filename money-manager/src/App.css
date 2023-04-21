@@ -106,7 +106,7 @@ a{
 
 .frame{
   border: 2px solid #165195;
-  padding: 115px;
+  padding: 105px;
   border-radius: 50px;
   box-shadow: 5px 4px 5px 5px #612195;
   background: #bd6add36;
@@ -136,9 +136,12 @@ a{
 .form__btn{
   margin-top: 15px;
   padding: 10px;
-  width: 100px;
-  border: 1px solid #612195;
+  width: 110px;
+  border: 2px solid #612195;
   border-radius: 20px;
   background: #fff;
+  color: #612195;
+  font-size: 20px;
+  font-weight: 600;
 }
 
