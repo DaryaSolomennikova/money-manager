@@ -34,9 +34,9 @@ const ServicePage = () => {
         <form className="transaction-form">
           <h1 className="transaction-header">Add Transaction</h1>
           <label className="input-label" htmlFor="title">TITLE</label>
-          <input type="text" id="title" className="input" placeholder="TITLE" value="" />
+          <input type="text" id="title" className="input" placeholder="TITLE" />
           <label className="input-label" htmlFor="amount">AMOUNT</label>
-          <input type="text" id="amount" className="input" placeholder="AMOUNT" value="" />
+          <input type="text" id="amount" className="input" placeholder="AMOUNT" />
           <label className="input-label" htmlFor="select">TYPE</label>
           <select id="select" className="input">
             <option value="INCOME">Income</option>
@@ -55,8 +55,8 @@ const ServicePage = () => {
               </li>    
             </ul>
           </div>
+        </div> 
         </div>
-      </div>
     </main>
   )
 }
