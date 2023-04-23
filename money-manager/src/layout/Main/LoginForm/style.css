@@ -1,9 +1,11 @@
 .frame{
+    position: relative;
     border: 2px solid #165195;
     padding: 105px;
     border-radius: 50px;
     box-shadow: 5px 4px 5px 5px #612195;
     background: #bd6add36;
+    margin-top: 50px;
   }
   
   .form{
@@ -38,3 +40,18 @@
     font-size: 20px;
     font-weight: 600;
   }  
+
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+  
+  .close-btn svg {
+    width: 24px;
+    height: 24px;
+    fill: #333;
+  }

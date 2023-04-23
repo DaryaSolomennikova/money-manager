@@ -1,16 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../../layout/Header';
 import "react-router-dom";
 import Main from '../../layout/Main/HomePage';
 import '../../App.css';
 
-function Home() {
+const Home: React.FC = () => {
+  const [showLoginForm, setShowLoginForm] = useState(false);
   return (
     <div className="Home">
-      <Header />
-      <Main />
+      <Header setShowLoginForm={setShowLoginForm} />
+      <Main showLoginForm={showLoginForm} setShowLoginForm={setShowLoginForm} />
     </div>
   );
-}
+};
 
 export default Home;

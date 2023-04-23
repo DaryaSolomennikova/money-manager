@@ -1,12 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css"
+import LoginForm from "../LoginForm";
 import expenses from '../../../expenses.png'
 import balance from '../../../balance.png'
 import income from '../../../income.png'
 
-const ServicePage = () => {
+interface AboutPageProps {
+  showLoginForm: boolean;
+  setShowLoginForm: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const ServicePage: React.FC<{ showLoginForm: boolean; setShowLoginForm: React.Dispatch<React.SetStateAction<boolean>> }> = ({ showLoginForm, setShowLoginForm }) => {
+  const [isMainContentVisible, setIsMainContentVisible] = useState(true);
+
+  const handleLoginFormClose = () => {
+    setShowLoginForm(false);
+  };
+
+  const handleLoginBtnClick = () => {
+    setIsMainContentVisible(false);
+  };
+
   return (
-    <main className="main-page">
+    <main className="service">
+      {showLoginForm && (
+        <LoginForm onLogin={() => {}} onClose={handleLoginFormClose} />
+      )}
+      <div className={`service-content ${showLoginForm ? "none" : ""}`}>
       <div className="finance-container">
         <div className="balance item">
           <img src={balance} alt="balance" />
@@ -56,6 +76,7 @@ const ServicePage = () => {
             </ul>
           </div>
         </div> 
+        </div>
         </div>
     </main>
   )

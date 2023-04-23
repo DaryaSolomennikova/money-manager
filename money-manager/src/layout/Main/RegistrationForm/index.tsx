@@ -16,7 +16,6 @@ function Registration() {
     <div className="auth">
       {showLoginForm ? (
         <>   
-        <LoginForm onLogin={() => setShowLoginForm(true)} />
           <p>
             Don't have an account?{" "}
             <button onClick={handleShowRegistrationForm}>Sign Up</button>

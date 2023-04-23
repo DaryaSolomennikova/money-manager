@@ -1,7 +1,14 @@
+.service{
+    display: flex;
+    justify-content: center;
+    height: 70vh;
+    align-items: center;
+    margin-left: 50px;
+}
+
 .finance-container{
     display: flex;
     justify-content: space-evenly;
-    margin-top: 30px;
 }
 
 .item{
@@ -12,6 +19,7 @@
     background: #fff;
     box-shadow: 5px 4px 5px 0px;
     border: 1px solid #ac7ed296;
+    margin: 0 50px;
 }
 
 .content{

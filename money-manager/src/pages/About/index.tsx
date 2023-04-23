@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../../layout/Header';
 // import './App.css';
 import AboutPage from '../../layout/Main/AboutPage';
 
-function About() {
+const About: React.FC = () => {
+  const [showLoginForm, setShowLoginForm] = useState(false);
   return (
     <div>
-    <Header />
-    <AboutPage />
+    <Header setShowLoginForm={setShowLoginForm} />
+    <AboutPage showLoginForm={showLoginForm} setShowLoginForm={setShowLoginForm} />
     </div>
   );
 }
