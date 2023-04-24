@@ -1,29 +1,47 @@
 import React, { useState } from "react";
-import LoginForm from "../LoginForm";
 import "./style.css"
-
-interface AboutPageProps {
-  showLoginForm: boolean;
-  setShowLoginForm: React.Dispatch<React.SetStateAction<boolean>>;
-}
+import LoginForm from "../LoginForm";
+import RegistrationForm from "../RegistrationForm";
 
 const AboutPage: React.FC<{ showLoginForm: boolean; setShowLoginForm: React.Dispatch<React.SetStateAction<boolean>> }> = ({ showLoginForm, setShowLoginForm }) => {
-  const [isMainContentVisible, setIsMainContentVisible] = useState(true);
+  const [showRegistrationForm, setShowRegistrationForm] = useState(false);
 
   const handleLoginFormClose = () => {
     setShowLoginForm(false);
   };
 
-  const handleLoginBtnClick = () => {
-    setIsMainContentVisible(false);
+  const handleRegistrationFormClose=() => {
+    setShowRegistrationForm(false);
+  }
+
+  const handleSwitchForm = () => {
+    if (showLoginForm) {
+      setShowRegistrationForm(true);
+      setShowLoginForm(false);
+    } else {
+      setShowLoginForm(true);
+      setShowRegistrationForm(false);
+    }
   };
+
+  const handleLogin = (email: string, password: string) => {
+    // Handle login logic
+  };
+
+  const handleSignUp = (nickname: string, email: string, password: string, confirmPassword: string) => {
+    // Handle sign up logic
+  };
+
   return (
     <div className="about">
-       {showLoginForm && (
-        <LoginForm onLogin={() => {}} onClose={handleLoginFormClose} />
+        {showLoginForm && !showRegistrationForm && (
+        <LoginForm onLogin={handleLogin} onSwitchToSignUp={handleSwitchForm} onClose={handleLoginFormClose} />
       )}
-    <div className={`about-content ${showLoginForm ? "none" : ""}`}>
-      <h1>В разработке...</h1>
+      {showRegistrationForm && (
+        <RegistrationForm onSignUp={handleSignUp} onSwitchToLogin={handleSwitchForm} onClose={handleRegistrationFormClose} />
+      )}
+    <div className={`about-content ${showLoginForm || showRegistrationForm ? "none" : ""}`}>
+      <h1>Our website is currently on work, we apologize for this...</h1>
     </div>
     </div>
   );

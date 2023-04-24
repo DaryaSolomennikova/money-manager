@@ -3,10 +3,11 @@ import "./style.css";
 
 interface LoginFormProps {
   onLogin: (email: string, password: string) => void;
+  onSwitchToSignUp: () => void;
   onClose: () => void;
 }
 
-const LoginForm: React.FC<LoginFormProps> = ({ onLogin, onClose }) => {
+const LoginForm: React.FC<LoginFormProps> = ({ onLogin, onSwitchToSignUp, onClose }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -56,7 +57,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLogin, onClose }) => {
         Log in
       </button>
       <p>
-        Don't have an account? <a href="/">Sign Up</a>
+        Don't have an account?  <a href="#" onClick={onSwitchToSignUp}>Sign Up</a>
       </p>
     </form>
   );

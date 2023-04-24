@@ -1,32 +1,49 @@
 import React, { useState } from "react";
 import "./style.css"
 import LoginForm from "../LoginForm";
+import RegistrationForm from "../RegistrationForm";
 import expenses from '../../../expenses.png'
 import balance from '../../../balance.png'
 import income from '../../../income.png'
 
-interface AboutPageProps {
-  showLoginForm: boolean;
-  setShowLoginForm: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
 const ServicePage: React.FC<{ showLoginForm: boolean; setShowLoginForm: React.Dispatch<React.SetStateAction<boolean>> }> = ({ showLoginForm, setShowLoginForm }) => {
-  const [isMainContentVisible, setIsMainContentVisible] = useState(true);
+  const [showRegistrationForm, setShowRegistrationForm] = useState(false);
 
   const handleLoginFormClose = () => {
     setShowLoginForm(false);
   };
 
-  const handleLoginBtnClick = () => {
-    setIsMainContentVisible(false);
+  const handleRegistrationFormClose=() => {
+    setShowRegistrationForm(false);
+  }
+
+  const handleSwitchForm = () => {
+    if (showLoginForm) {
+      setShowRegistrationForm(true);
+      setShowLoginForm(false);
+    } else {
+      setShowLoginForm(true);
+      setShowRegistrationForm(false);
+    }
+  };
+
+  const handleLogin = (email: string, password: string) => {
+    // Handle login logic
+  };
+
+  const handleSignUp = (nickname: string, email: string, password: string, confirmPassword: string) => {
+    // Handle sign up logic
   };
 
   return (
     <main className="service">
-      {showLoginForm && (
-        <LoginForm onLogin={() => {}} onClose={handleLoginFormClose} />
+       {showLoginForm && !showRegistrationForm && (
+        <LoginForm onLogin={handleLogin} onSwitchToSignUp={handleSwitchForm} onClose={handleLoginFormClose} />
       )}
-      <div className={`service-content ${showLoginForm ? "none" : ""}`}>
+      {showRegistrationForm && (
+        <RegistrationForm onSignUp={handleSignUp} onSwitchToLogin={handleSwitchForm} onClose={handleRegistrationFormClose} />
+      )}
+      <div className={`service-content ${showLoginForm || showRegistrationForm ? "none" : ""}`}>
       <div className="finance-container">
         <div className="balance item">
           <img src={balance} alt="balance" />
@@ -50,6 +67,7 @@ const ServicePage: React.FC<{ showLoginForm: boolean; setShowLoginForm: React.Di
           </div>
         </div>
       </div>
+      
       <div className="transaction-details">
         <form className="transaction-form">
           <h1 className="transaction-header">Add Transaction</h1>

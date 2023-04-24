@@ -1,11 +1,10 @@
 .frame{
     position: relative;
     border: 2px solid #165195;
-    padding: 105px;
+    padding: 70px;
     border-radius: 50px;
     box-shadow: 5px 4px 5px 5px #612195;
     background: #bd6add36;
-    margin-top: 50px;
   }
   
   .form{
