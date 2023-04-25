@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Header from '../../layout/Header';
-// import './App.css';
 import AboutPage from '../../layout/Main/AboutPage';
 
 const About: React.FC = () => {

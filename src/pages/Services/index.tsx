@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Header from '../../layout/Header';
-// import './App.css';
 import ServicePage from '../../layout/Main/ServicePage';
 
 const Service: React.FC = () => {
