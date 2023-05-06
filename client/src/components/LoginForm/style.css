@@ -6,6 +6,16 @@
     box-shadow: 5px 4px 5px 5px #612195;
     background: #bd6add36;
   }
+
+  .link-button{
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    color: #612195;
+    font-weight: bolder;
+    font-style: italic;
+    cursor: pointer;
+}
   
   .form{
     width: 40vh;
@@ -39,6 +49,16 @@
     font-size: 20px;
     font-weight: 600;
   }  
+
+  .form__btn:hover{
+    background: #bd6add9a;
+    transition: ease-in-out 0.45s;
+  }
+
+  .form-btn:active{
+    background: #bd6add9a;
+    transition: ease-in-out 0.45s;
+  }
 
   .close-btn {
     position: absolute;

@@ -21,9 +21,8 @@
   .main{
     display: flex;
     justify-content: center;
-    height: 55vh;
     align-items: center;
-    margin-left: 50px;
+    margin-top: 50px;
   }
   
   .title{

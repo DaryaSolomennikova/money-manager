@@ -1,4 +1,6 @@
+import { Form, FormikProvider, useFormik } from "formik";
 import React, { useState } from "react";
+import FormikRegistration from "../FormikRegistration/FormikRegistration";
 
 interface RegistrationFormProps {
   onSignUp: (nickname: string, email: string, password: string, confirmpassword: string) => void;
@@ -12,6 +14,20 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ onSignUp, onSwitchT
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
+  const formikRegistration = useFormik({
+    enableReinitialize: true,
+    initialValues: {
+      name: "",
+      email: "",
+      password: "",
+      confirmpassword: "",
+    },
+    onSubmit: (values) => {
+      console.log(values);
+      // dispatch(increment(values.amount))
+    },
+  });
+
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (nickname && email && password && password) {
@@ -22,13 +38,20 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ onSignUp, onSwitchT
   };
 
   return (
-    <form className="frame" onSubmit={handleSubmit}>
+    <FormikProvider value={formikRegistration}>
+    <Form className="frame" onSubmit={handleSubmit}>
       <button className="close-btn" onClick={onClose}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
           <path d="M19.3 5.71a1 1 0 0 0-1.41 0L12 10.59l-5.89-5.9a1 1 0 0 0-1.41 1.41L10.59 12l-5.9 5.89a1 1 0 0 0 1.41 1.41L12 13.41l5.89 5.9a1 1 0 0 0 1.41-1.41L13.41 12l5.89-5.89a1 1 0 0 0 0-1.4z" />
         </svg>
       </button>
-      <div className="form">
+      <FormikRegistration
+          label="Name"
+          name="name"
+          placeholder="Enter your name"
+          type="name"
+        />
+      {/* <div className="form">
         <label className="name" htmlFor="email">
           Name
         </label>
@@ -39,8 +62,14 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ onSignUp, onSwitchT
           value={nickname}
           onChange={(event) => setEmail(event.target.value)}
         />
-      </div>
-      <div className="form">
+      </div> */}
+       <FormikRegistration
+          label="Email"
+          name="email"
+          placeholder="Enter your email"
+          type="email"
+        />
+      {/* <div className="form">
         <label className="name" htmlFor="email">
           Email:
         </label>
@@ -51,8 +80,14 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ onSignUp, onSwitchT
           value={email}
           onChange={(event) => setEmail(event.target.value)}
           />
-        </div>
-        <div className="form">
+        </div> */}
+        <FormikRegistration
+          label="Password"
+          name="password"
+          placeholder="Enter your password"
+          type="password"
+        />
+        {/* <div className="form">
           <label className="name" htmlFor="password">
             Password:
           </label>
@@ -63,8 +98,14 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ onSignUp, onSwitchT
             value={password}
             onChange={(event) => setPassword(event.target.value)}
           />
-        </div>
-        <div className="form">
+        </div> */}
+        <FormikRegistration
+          label="Confirm password"
+          name="confirmpassword"
+          placeholder="Enter your password"
+          type="confirmpassword"
+        />
+        {/* <div className="form">
           <label className="name" htmlFor="password">
           Confirm password
           </label>
@@ -75,14 +116,16 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ onSignUp, onSwitchT
             value={password}
             onChange={(event) => setPassword(event.target.value)}
           />
-        </div>
-        <button className="form__btn" type="submit">
+        </div> */}
+        <button className="form__btn" type="submit" onClick={(e: any) => formikRegistration.handleSubmit(e)}>
           Sign up
         </button>
         <p>
-        Already have an account? <a href="#" onClick={onSwitchToLogin}>Log in</a>
+        Already have an account? 
+        <button onClick={onSwitchToLogin} className="link-button">Log in</button>
         </p>
-      </form>
+      </Form>
+      </FormikProvider>
     );
   };
   

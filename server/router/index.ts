@@ -1,5 +1,5 @@
 const Router = require("express").Router;
-import { userController } from "../controllers/user-controller";
+const userController = require ("../controllers/user-controller.ts");
 import authMiddleware from "../middlewares/auth-middleware";
 import { body } from "express-validator";
 
