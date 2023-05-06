@@ -32,17 +32,18 @@ const FormikSelect = ({
       <label className="input-label" htmlFor="select">
         {label}
       </label>
-      <select {...field} id="select" className="input" onChange={onChangeHandler}>
-      {options.map((option:any) => {
-        return (
-            <option value={option.value}>{option.label}</option>
-        )
+      <select
+        {...field}
+        id="select"
+        className="input"
+        onChange={onChangeHandler}
+      >
+        {options.map((option: any) => {
+          return <option value={option.value}>{option.label}</option>;
         })}
-    </select>
+      </select>
     </>
   );
 };
 
 export default FormikSelect;
-
-

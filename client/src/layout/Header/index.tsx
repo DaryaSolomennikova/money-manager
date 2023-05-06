@@ -6,12 +6,16 @@ import "./style.css";
 // import LoginForm from "../../components/LoginForm";
 import LoginBtn from "../../components/LoginBtn";
 
-export const Header = ({ setShowLoginForm }: { setShowLoginForm: React.Dispatch<React.SetStateAction<boolean>> }) => {
+export const Header = ({
+  setShowLoginForm,
+}: {
+  setShowLoginForm: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
   return (
     <header className="header">
       <div className="header__item">
-      <Logo />
-      <Navigation />
+        <Logo />
+        <Navigation />
       </div>
       <LoginBtn onClick={() => setShowLoginForm(true)} />
       <User />
@@ -20,5 +24,3 @@ export const Header = ({ setShowLoginForm }: { setShowLoginForm: React.Dispatch<
 };
 
 export default Header;
-
-

@@ -1,21 +1,21 @@
-import React from 'react';
+import React from "react";
 import "../../src/layout/Main/ServicePage";
-import trashcan from "../../../trashcan.png"
+import trashcan from "../../../trashcan.png";
 
 interface TransactionItemProps {
-    title: string;
-    amount: number;
-    type: string;
-    id: string;
-    deleteTransaction: (id: string) => void;
-  }
-  
-  const TransactionItem: React.FC<TransactionItemProps> = (props) => {
-    const { title, amount, type, id, deleteTransaction } = props;
-  
-    const onDeleteTransaction = () => {
-      deleteTransaction(id);
-    };
+  title: string;
+  amount: number;
+  type: string;
+  id: string;
+  deleteTransaction: (id: string) => void;
+}
+
+const TransactionItem: React.FC<TransactionItemProps> = (props) => {
+  const { title, amount, type, id, deleteTransaction } = props;
+
+  const onDeleteTransaction = () => {
+    deleteTransaction(id);
+  };
 
   return (
     <li className="table-row">
@@ -29,15 +29,11 @@ interface TransactionItemProps {
           onClick={onDeleteTransaction}
           data-testid="delete"
         >
-          <img
-            className="delete-img"
-            src={trashcan}
-            alt="delete"
-          />
+          <img className="delete-img" src={trashcan} alt="delete" />
         </button>
       </div>
     </li>
-  )
-}
+  );
+};
 
-export default TransactionItem
+export default TransactionItem;

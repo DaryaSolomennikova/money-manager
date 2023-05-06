@@ -134,28 +134,18 @@ const ServicePage: React.FC<{
                 label={"TITLE"}
                 placeholder={"TITLE"}
               />
-              {/* <label className="input-label" htmlFor="title">TITLE</label>
-          <input name="title" type="text" id="title" className="input" placeholder="TITLE" /> */}
               <FormikInput
                 name={"amount"}
                 value={formik.values.amount}
                 label={"AMOUNT"}
                 placeholder={"AMOUNT"}
               />
-              {/* <label className="input-label" htmlFor="amount">AMOUNT</label>
-          <input name="amount" type="text" id="amount" className="input" placeholder="AMOUNT" /> */}
               <FormikSelect
                 name={"type"}
                 value={formik.values.type}
                 label={"TYPE"}
                 options={options}
               />
-
-              {/* <label className="input-label" htmlFor="select">TYPE</label>
-          <select id="select" className="input">
-            <option value="INCOME">Income</option>
-            <option value="EXPENSES">Expenses</option>
-          </select> */}
               <button
                 type="submit"
                 className="button"

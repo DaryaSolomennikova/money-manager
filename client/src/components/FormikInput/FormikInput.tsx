@@ -1,14 +1,14 @@
-import React from 'react';
-import { useField } from 'formik';
+import React from "react";
+import { useField } from "formik";
 import "./style.css";
 
 type FormikInputPropsType = {
-  label?: string,
-  name?: any,
-  value?: string,
-  placeholder?: string,
-  type?: string,
-}
+  label?: string;
+  name?: any;
+  value?: string;
+  placeholder?: string;
+  type?: string;
+};
 
 const FormikInput = ({
   label,
@@ -16,7 +16,7 @@ const FormikInput = ({
   value,
   placeholder,
   type,
-}:FormikInputPropsType) => {
+}: FormikInputPropsType) => {
   const [field, meta, helpers] = useField(name);
 
   const { setValue } = helpers;
@@ -29,18 +29,19 @@ const FormikInput = ({
 
   return (
     <div>
-      <label className="input-label" htmlFor="title">{label}</label>
+      <label className="input-label" htmlFor="title">
+        {label}
+      </label>
       <input
         {...field}
         value={field.value}
         onChange={onChangeHandler}
         type={type}
         placeholder={placeholder}
-        className='input'
+        className="input"
       />
     </div>
   );
 };
-
 
 export default FormikInput;

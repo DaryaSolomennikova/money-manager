@@ -57,36 +57,12 @@ const LoginForm: React.FC<LoginFormProps> = ({
           placeholder="Enter your email"
           type="email"
         />
-        {/* <div className="form">
-        <label className="name" htmlFor="email">
-          Email:
-        </label>
-        <input
-          className="field"
-          type="email"
-          id="email"
-          value={email}
-          onChange={(event) => setEmail(event.target.value)}
-        /> 
-      </div>*/}
         <FormikLogin
           label="Password"
           name="password"
           placeholder="Enter your password"
           type="password"
         />
-        {/* <div className="form">
-        <label className="name" htmlFor="password">
-          Password:
-        </label>
-        <input
-          className="field"
-          type="password"
-          id="password"
-          value={password}
-          onChange={(event) => setPassword(event.target.value)}
-        />
-      </div> */}
         {error && <div className="error">{error}</div>}
         <button
           className="form__btn"
@@ -97,7 +73,9 @@ const LoginForm: React.FC<LoginFormProps> = ({
         </button>
         <p>
           Don't have an account?{" "}
-          <button onClick={onSwitchToSignUp} className="link-button">Sign up</button>
+          <button onClick={onSwitchToSignUp} className="link-button">
+            Sign up
+          </button>
         </p>
       </Form>
     </FormikProvider>

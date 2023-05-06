@@ -32,7 +32,7 @@ const FormikRegistration = ({
       <label className="name" htmlFor={name}>
         {label}
       </label>
-       <input
+      <input
         className="field"
         placeholder={placeholder}
         value={field.value}
