@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./style.css";
 
 const Navigation: React.FC = () => {
@@ -6,19 +7,19 @@ const Navigation: React.FC = () => {
     <nav>
       <ul className="nav__list">
         <li>
-          <a className="nav__link" href="/">
+          <Link className="nav__link" to="/">
             Home
-          </a>
+          </Link>
         </li>
         <li>
-          <a className="nav__link" href="/about">
+          <Link className="nav__link" to="/about">
             How it work
-          </a>
+          </Link>
         </li>
         <li>
-          <a className="nav__link" href="/services">
+          <Link className="nav__link" to="/services">
             Services
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>
