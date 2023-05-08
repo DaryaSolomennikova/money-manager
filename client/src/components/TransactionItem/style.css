@@ -1,0 +1,37 @@
+.table-row{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    background: #a54dc882;
+    border-radius: 5px;
+    margin: 5px auto;
+    padding-left: 50px;
+    justify-content: space-between;
+}
+
+.delete-container{
+    display: flex;
+    padding-right: 20px;
+    margin-left: -40px;
+}
+
+.delete-button{
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.delete-img:hover{
+    cursor: pointer;
+    background: #fdfdfd52;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px #fff;
+    transition: 0.6s;
+}
+
+.transaction-text{
+    color: #612195;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.6;
+}

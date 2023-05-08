@@ -38,8 +38,8 @@ const FormikSelect = ({
         className="input"
         onChange={onChangeHandler}
       >
-        {options.map((option: any) => {
-          return <option value={option.value}>{option.label}</option>;
+        {options.map((option: any , index: number) => {
+          return <option key={`${option.value}_${index}`} value={option.value}>{option.label}</option>;
         })}
       </select>
     </>

@@ -1,10 +1,10 @@
 import React from "react";
-import "../../src/layout/Main/ServicePage";
-import trashcan from "../../../trashcan.png";
+import "./style.css";
+import trashcan from "../../images/trashcan.png";
 
 interface TransactionItemProps {
   title: string;
-  amount: number;
+  amount: string;
   type: string;
   id: string;
   deleteTransaction: (id: string) => void;
@@ -13,7 +13,7 @@ interface TransactionItemProps {
 const TransactionItem: React.FC<TransactionItemProps> = (props) => {
   const { title, amount, type, id, deleteTransaction } = props;
 
-  const onDeleteTransaction = () => {
+  const handleDeleteTransaction = () => {
     deleteTransaction(id);
   };
 
@@ -26,7 +26,7 @@ const TransactionItem: React.FC<TransactionItemProps> = (props) => {
         <button
           className="delete-button"
           type="button"
-          onClick={onDeleteTransaction}
+          onClick={handleDeleteTransaction}
           data-testid="delete"
         >
           <img className="delete-img" src={trashcan} alt="delete" />

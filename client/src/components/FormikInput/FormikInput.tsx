@@ -5,7 +5,7 @@ import "./style.css";
 type FormikInputPropsType = {
   label?: string;
   name?: any;
-  value?: string;
+  value?: string | number;
   placeholder?: string;
   type?: string;
 };
