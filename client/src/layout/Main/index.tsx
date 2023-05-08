@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./style.css";
 import LoginForm from "../../components/LoginForm";
 import RegistrationForm from "../../components/RegistrationForm";
+import { Link } from "react-router-dom";
 
 const Main: React.FC<{
   showLoginForm: boolean;
@@ -69,7 +70,7 @@ const Main: React.FC<{
           money resources. It provides an opportunity to regulate the expense,
           the total cash flow on a monthly basis and generates statistical data.
         </p>
-        <button className="auth">How it work</button>
+        <Link to="/about" className="auth"> How it work </Link>
       </div>
     </section>
   );
