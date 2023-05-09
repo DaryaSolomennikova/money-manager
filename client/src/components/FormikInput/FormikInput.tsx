@@ -28,7 +28,7 @@ const FormikInput = ({
   };
 
   return (
-    <div>
+    <div className="input-field">
       <label className="input-label" htmlFor="title">
         {label}
       </label>

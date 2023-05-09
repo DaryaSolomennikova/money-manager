@@ -66,11 +66,17 @@ const Main: React.FC<{
           Manage your money <br /> very quickly
         </h1>
         <p className="main-description">
-          Money Manager is a useful service that helps you manage your personal
-          money resources. It provides an opportunity to regulate the expense,
-          the total cash flow on a monthly basis and generates statistical data.
+          Money Manager is a useful service that will help you manage your
+          personal money. After all, it is very important to take into account
+          our expenses and incomes. Without this, it is impossible to fully
+          assess how much we earn and how much we spend. And most importantly,
+          it is the accounting of our expenses that will help you understand
+          what you can save on.
         </p>
-        <Link to="/about" className="auth"> How it work </Link>
+        <Link to="/about" className="auth">
+          {" "}
+          How it work{" "}
+        </Link>
       </div>
     </section>
   );

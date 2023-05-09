@@ -1,7 +1,75 @@
-.about{
+.about {
     display: flex;
     justify-content: center;
-    height: 70vh;
     align-items: center;
-    margin-left: 50px;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    color: #612195;
+}
+
+span{
+    color: #e42cde;
+    font-style: italic;
+ font-size: 18px;
+}
+
+.service-form {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.cards p{
+    text-align: start;
+}
+
+.cards__desc img {
+    width: 70%;
+    border: 1px solid #333;
+}
+
+.cards_list {
+    list-style: disc;
+    text-align: start;
+}
+
+.add-form {
+    display: flex;
+    flex-direction: column;
+    margin-right: 25px;
+}
+
+.add-form img {
+    width: 45%;
+    margin: 0 auto;
+    border: 1px solid #333;
+}
+
+.description__add-form {
+    text-align: start;
+    list-style: disc;
+}
+
+.history-form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px;
+}
+
+.history-form img {
+    border: 1px solid #333;
+}
+
+.line-h{
+    border-bottom: 4px dotted #612195;
+    height: 40px;
+}
+
+.line-v {
+    border-left: 4px dotted #612195;
+    height: 450px;
 }
